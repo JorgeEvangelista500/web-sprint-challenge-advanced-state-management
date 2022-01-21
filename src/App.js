@@ -13,7 +13,7 @@ import { fetchSmurfs } from './actions';
 
 const App = ({dispatch}) => {
 
-  useEffect(()=> {
+  useEffect(() => {
     dispatch(fetchSmurfs());
   }, []);
 
