@@ -1,5 +1,4 @@
 import axios from 'axios';
-import reducer from '../reducers';
 
 export const FETCH_START = 'FETCH_START' ;
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
@@ -11,7 +10,7 @@ export const fetchSmurfs = () => (dispatch) => {
     dispatch({type:FETCH_START});
         axios.get('http://localhost:3333/smurfs')
             .then(resp => {
-                
+                console.log(resp)
                 dispatch({type:FETCH_SUCCESS, payload:resp.data})
             })
             .catch(err => dispatch({type:FETCH_FAIL, payload:'Error fetching data' }))
