@@ -18,6 +18,7 @@ worker.start();
 const rootElement = document.getElementById("root");
 
 const store = createStore(reducer, applyMiddleware(thunk));
+
 ReactDOM.render(
     <Provider store={store}>
         <App />
