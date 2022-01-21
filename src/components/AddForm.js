@@ -27,6 +27,7 @@ const AddForm = ({ error, dispatch }) => {
         } else {
             dispatch(addSmurf(state))
         }
+        setState({name:"", position:"", nickname:"", description:""})
     }
 
     return(<section>
